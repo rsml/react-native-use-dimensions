@@ -25,7 +25,7 @@ export const useScreenDimensions = (): ScaledSize => {
 
     const eventListener = Dimensions.addEventListener("change", onChange);
 
-    return (): void => eventListener?.remove?.();
+    return (): void => eventListener.remove();
   });
 
   return {
